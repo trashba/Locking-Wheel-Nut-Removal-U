@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.example.org/
+Host: https://www.lockingwheelnutremoval.uk/
 
 # Sitemaps
-Sitemap: https://www.example.org/sitemap.xml
+Sitemap: https://www.lockingwheelnutremoval.uk/sitemap.xml

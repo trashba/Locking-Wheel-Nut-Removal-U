@@ -1,0 +1,77 @@
+@import "../../utils/typography";
+@import "../../utils/screen";
+
+.alert {
+  position: fixed;
+  top: 5em;
+  right: 5vw;
+
+  cursor: pointer;
+  z-index: 2;
+
+  display: flex;
+
+  padding: 1em;
+
+  border-radius: var(--border-radius);
+
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+  @include screen(xl) {
+    right: 7vw;
+  }
+
+  &__blue {
+    color: var(--blue-600);
+    background-color: var(--blue-100);
+
+    &:hover {
+      background-color: var(--blue-200);
+      box-shadow: 0 0 0 3px var(--blue-300);
+    }
+  }
+
+  &__red {
+    color: var(--red-600);
+    background-color: var(--red-100);
+
+    &:hover {
+      background-color: var(--red-200);
+      box-shadow: 0 0 0 3px var(--red-300);
+    }
+  }
+
+  &__yellow {
+    color: var(--yellow-600);
+    background-color: var(--yellow-100);
+
+    &:hover {
+      background-color: var(--yellow-200);
+      box-shadow: 0 0 0 3px var(--yellow-300);
+    }
+  }
+
+  &__green {
+    color: var(--green-600);
+    background-color: var(--green-100);
+
+    &:hover {
+      background-color: var(--green-200);
+      box-shadow: 0 0 0 3px var(--green-300);
+    }
+  }
+
+  .alert__icon {
+    margin-right: 0.75rem;
+  }
+
+  .alert__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .content__description {
+      margin-top: 0.25rem;
+    }
+  }
+}

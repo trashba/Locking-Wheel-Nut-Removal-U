@@ -1,0 +1,5 @@
+@mixin gap($spacing) {
+  @supports (-webkit-touch-callout: none) {
+    gap: $spacing;
+  }
+}

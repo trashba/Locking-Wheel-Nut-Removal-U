@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 
 module.exports = {
-  siteUrl: "https://www.example.org/",
+  siteUrl: "https://www.lockingwheelnutremoval.uk/",
   generateRobotsTxt: true,
 };

@@ -3,12 +3,14 @@ import type { GetStaticPropsContext, NextPage } from "next";
 import Layout from "@components/Layout/Main";
 import Seo from "@components/Seo";
 
-const HomePage: NextPage = () => {
+import styles from "@styles/pages/not-found.module.scss";
+
+const NotFoundPage: NextPage = () => {
   return (
     <Layout>
-      <Seo />
+      <Seo title="404" />
 
-      <div className="container">Locking Wheel Nut Removal UK</div>
+      <div className="container">404 Not Found</div>
     </Layout>
   );
 };
@@ -17,4 +19,4 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => ({
   props: {},
 });
 
-export default HomePage;
+export default NotFoundPage;

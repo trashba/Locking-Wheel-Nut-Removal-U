@@ -1,0 +1,163 @@
+@import "../utils/browser";
+@import "../utils/typography";
+@import "../utils/screen";
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: white;
+
+  padding-top: 1em;
+  padding-bottom: 1em;
+
+  border-bottom: 1px solid var(--gray-300);
+
+  transition: background-color 0.3s ease, border 0.3s ease;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    row-gap: 10px;
+
+    @include gap(10px);
+
+    svg {
+      width: 30px;
+      height: 30px;
+
+      path {
+        fill: var(--blue-700);
+      }
+    }
+
+    .logo__title {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .header__nav {
+    display: flex;
+    align-items: center;
+    column-gap: 1em;
+
+    @include gap(1em);
+
+    .nav__list {
+      display: none;
+
+      @include screen(md) {
+        display: flex;
+        align-items: center;
+        column-gap: 1em;
+
+        @include gap(1em);
+      }
+
+      .list__item {
+        .item__link {
+          @include typography(16px, 500, 24px, 0, left);
+        }
+      }
+    }
+
+    .drawer_btn {
+      display: flex;
+
+      @include screen(md) {
+        display: none;
+      }
+    }
+
+    .header_user {
+      display: none;
+
+      @include screen(md) {
+        display: flex;
+      }
+    }
+  }
+}
+
+.modal_content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+  column-gap: 1em;
+
+  height: 100%;
+
+  padding: 1.5em;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    row-gap: 10px;
+
+    @include gap(10px);
+
+    svg {
+      width: 30px;
+      height: 30px;
+
+      path {
+        fill: var(--blue-700);
+      }
+    }
+
+    .logo__title {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .header__nav {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+
+    height: 100%;
+
+    @include gap(1em);
+
+    .nav__list {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      row-gap: 0.5em;
+
+      @include gap(1em);
+
+      .list__item {
+        width: 100%;
+        display: flex;
+
+        .item__link {
+          width: 100%;
+
+          @include typography(16px, 500, 24px, 0, left);
+        }
+      }
+    }
+  }
+
+  .modal_user {
+    margin-top: auto;
+  }
+}
+
+[data-theme="dark"] {
+  .header {
+    background-color: var(--gray-800);
+
+    border-color: var(--gray-600);
+  }
+}

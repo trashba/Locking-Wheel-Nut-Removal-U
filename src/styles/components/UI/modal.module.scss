@@ -1,0 +1,57 @@
+@import "../../utils/screen";
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(#374151, 0.8);
+
+  transition: visibility 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+
+  &__hidden {
+    .modal__content {
+      transform: scale(0.9);
+    }
+
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .modal__content {
+    display: flex;
+
+    min-width: 70vw;
+    min-height: 50vh;
+    max-width: 90vw;
+    max-height: 90vh;
+
+    padding: 2em;
+
+    background-color: white;
+    border-radius: var(--border-radius);
+
+    transition: transform 0.3s ease;
+
+    @include screen(xl) {
+      min-width: 50vw;
+      min-height: 50vh;
+    }
+  }
+}
+
+[data-theme="dark"] {
+  .modal {
+    .modal__content {
+      background-color: var(--gray-800);
+    }
+  }
+}

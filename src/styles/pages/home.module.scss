@@ -1,0 +1,222 @@
+@import "../utils/typography";
+@import "../utils/screen";
+@import "../utils/browser";
+
+.landing {
+  padding: 5em 0;
+
+  @include screen(md) {
+    padding: 3em;
+  }
+
+  @include screen(xl) {
+    padding: 5em;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2em;
+
+    @include gap(2em);
+  }
+
+  .landing__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include screen(xl) {
+      align-items: flex-start;
+    }
+
+    .content__title {
+      @include typography(38px, 600, 46px, -1.5px, center);
+
+      @include screen(sm) {
+        font-size: 56px;
+        line-height: 62px;
+        letter-spacing: -2.4px;
+      }
+
+      @include screen(lg) {
+        font-size: 72px;
+        line-height: 72px;
+        letter-spacing: -3px;
+      }
+
+      @include screen(xl) {
+        text-align: left;
+      }
+    }
+
+    .content__description {
+      color: var(--gray-600);
+
+      margin: 16px 0 24px;
+
+      @include typography(16px, 400, 24px, 0, center);
+
+      @include screen(sm) {
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: -0.3px;
+      }
+
+      @include screen(lg) {
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: -0.4px;
+        margin-bottom: 40px;
+        margin-top: 24px;
+      }
+
+      @include screen(xl) {
+        text-align: left;
+      }
+
+      a {
+        color: var(--blue-800);
+      }
+    }
+
+    .content__action {
+      text-transform: uppercase;
+
+      margin: auto;
+
+      @include screen(md) {
+        margin: unset;
+      }
+    }
+  }
+
+  .landing__illustration {
+    display: none;
+
+    @include screen(xl) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    svg {
+      max-height: 50vh;
+
+      ellipse {
+        transition: fill 0.3s ease;
+
+        fill: var(--gray-900);
+      }
+
+      path {
+        transition: fill 0.3s ease, stroke 0.3s ease;
+      }
+    }
+  }
+}
+
+.support {
+  padding-bottom: 2em;
+
+  .support__title {
+    text-align: center;
+
+    margin-bottom: 26px;
+
+    @include typography(24px, 600, 32px, 0, center);
+
+    @include screen(sm) {
+      font-size: 38px;
+      line-height: 46px;
+      letter-spacing: -1.5px;
+    }
+  }
+
+  .support__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .list__item {
+      position: relative;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      padding: 0 2em;
+
+      &::after {
+        content: " ";
+        position: absolute;
+        right: 0;
+        top: 50%;
+
+        width: 1px;
+        height: 30px;
+
+        background-color: var(--gray-600);
+
+        transform: translateY(-50%);
+      }
+
+      &:last-child {
+        &::after {
+          content: unset;
+        }
+      }
+
+      svg {
+        width: 32px;
+        height: 32px;
+
+        margin-bottom: 8px;
+      }
+    }
+  }
+}
+
+[data-theme="dark"] {
+  .landing {
+    .landing__content {
+      .content__description {
+        color: var(--gray-300);
+
+        a {
+          color: var(--blue-400);
+        }
+      }
+    }
+
+    .landing__illustration {
+      svg {
+        ellipse {
+          fill: var(--blue-300);
+        }
+
+        circle {
+          stroke: var(--blue-300);
+        }
+
+        path {
+          stroke: var(--blue-300) !important;
+
+          &[class="landing--chair"] {
+            fill: transparent;
+          }
+        }
+      }
+    }
+  }
+
+  .support {
+    .support__list {
+      .list__item {
+        &::after {
+          background-color: var(--gray-300);
+        }
+      }
+    }
+  }
+}
