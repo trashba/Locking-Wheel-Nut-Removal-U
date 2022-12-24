@@ -51,10 +51,6 @@
       @include screen(lg) {
         font-size: 1.2em;
       }
-
-      @include screen(xl) {
-        font-size: 1.8em;
-      }
     }
   }
 
@@ -128,10 +124,6 @@
 
       @include screen(lg) {
         font-size: 1.2em;
-      }
-
-      @include screen(xl) {
-        font-size: 1.8em;
       }
     }
   }

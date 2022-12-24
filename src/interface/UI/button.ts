@@ -5,7 +5,8 @@ export type StyleColors =
   | "yellow"
   | "gray"
   | "light"
-  | "green";
+  | "green"
+  | "dark";
 
 // Button Size
 export type Size = "xs" | "sm" | "md" | "lg" | "xl";

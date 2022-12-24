@@ -1,0 +1,10 @@
+.map {
+  min-width: 100%;
+  min-height: 300px;
+  border-radius: var(--border-radius);
+
+  img[class*="leaflet-marker-icon"] {
+    background-color: transparent;
+    border: none;
+  }
+}

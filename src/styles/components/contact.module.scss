@@ -1,0 +1,29 @@
+@import "../utils/typography";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  a {
+    font-family: Inter;
+
+    @include typography(16px, 600, 24px, 0, center);
+  }
+
+  h2 {
+    margin-top: 12px;
+    margin-bottom: 24px;
+
+    font-family: Inter;
+    @include typography(48px, 800, 48px, 0, center);
+  }
+
+  p {
+    margin-bottom: 32px;
+
+    font-family: Inter;
+
+    @include typography(20px, 400, 30px, 0, center);
+  }
+}

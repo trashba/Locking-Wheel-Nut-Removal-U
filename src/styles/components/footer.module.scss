@@ -1,9 +1,14 @@
 @import "../utils/browser";
+@import "../utils/screen";
 
 .footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-direction: column;
+
+  column-gap: 1.5em;
+  row-gap: 1.5em;
 
   background-color: white;
 
@@ -15,9 +20,12 @@
 
   transition: background-color 0.3s ease, border 0.3s ease;
 
+  @include screen(md) {
+    flex-direction: row;
+  }
+
   a {
-    color: var(--blue-800);
-    font-weight: 500;
+    font-weight: 600;
 
     display: flex;
     align-items: center;
@@ -27,6 +35,8 @@
     svg {
       width: 1.2em;
       height: 1.2em;
+      min-width: 1.2em;
+      min-height: 1.2em;
     }
   }
 }

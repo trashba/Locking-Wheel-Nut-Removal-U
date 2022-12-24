@@ -11,35 +11,35 @@ import ExportedImage from "next-image-export-optimizer";
 
 type Props = {};
 
+export const navigation: {
+  title: string;
+  url: string;
+  visible?: boolean;
+}[] = [
+  {
+    title: "Home",
+    url: "/",
+  },
+  {
+    title: "Gallery",
+    url: "/#gallery",
+  },
+  {
+    title: "Testimonials",
+    url: "/#testimonials",
+  },
+  {
+    title: "Contact",
+    url: "/#contact",
+  },
+  {
+    title: "Customers Stories",
+    url: "/#contact",
+  },
+];
+
 const Header: NextPage<Props> = ({}) => {
   const [drawer, setDrawer] = useState<boolean>(false);
-
-  const navigation: {
-    title: string;
-    url: string;
-    visible?: boolean;
-  }[] = [
-    {
-      title: "Home",
-      url: "/",
-    },
-    {
-      title: "Gallery",
-      url: "/#gallery",
-    },
-    {
-      title: "Testimonials",
-      url: "/#testimonials",
-    },
-    {
-      title: "Contact",
-      url: "/#contact",
-    },
-    {
-      title: "Customers Stories",
-      url: "/#contact",
-    },
-  ];
 
   return (
     <>

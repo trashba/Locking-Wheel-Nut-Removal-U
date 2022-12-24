@@ -28,6 +28,17 @@
     }
   }
 
+  &__dark {
+    color: white;
+    background-color: var(--gray-600);
+
+    &:hover,
+    &:focus {
+      background-color: var(--gray-700);
+      box-shadow: 0 0 0 3px var(--gray-400);
+    }
+  }
+
   &__red {
     color: white;
     background-color: var(--red-600);

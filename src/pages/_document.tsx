@@ -56,6 +56,13 @@ class MyDocument extends Document {
             name="keywords"
             content="locking wheel nut removal, mobile locking wheel nut removal, locking wheel bolt removal, locking wheel bolt removal, lock nut removal, locking wheel nut removal service, locknut remover, locking wheel nut remover, lock wheel nut removal services, "
           />
+
+          <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+            integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+            crossOrigin=""
+          />
         </Head>
 
         <body>
