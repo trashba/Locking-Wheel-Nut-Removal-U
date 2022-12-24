@@ -38,14 +38,6 @@ class MyDocument extends Document {
           />
 
           {process.env.NODE_ENV !== "development" &&
-            process.env.NEXT_PUBLIC_SEACH_CONSOLE_KEY && (
-              <meta
-                name="google-site-verification"
-                content={process.env.NEXT_PUBLIC_SEACH_CONSOLE_KEY}
-              />
-            )}
-
-          {process.env.NODE_ENV !== "development" &&
             process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
               <Script
                 id="google-analytics"

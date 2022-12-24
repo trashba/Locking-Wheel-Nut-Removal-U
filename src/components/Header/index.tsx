@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import type { NextPage } from "next";
 import Link from "next/link";
 
-import { BarsIcon, LogoIcon, UserAddIcon, UserIcon } from "@icon";
+import { BarsIcon, UserAddIcon, UserIcon } from "@icon";
 import { Button, Drawer } from "@ui";
 import seoData from "@data/seo";
 
@@ -83,8 +83,6 @@ const Header: NextPage<Props> = ({}) => {
       <Drawer visible={drawer} setVisible={setDrawer}>
         <div className={styles.modal_content}>
           <Link href="/" className={styles.logo}>
-            <LogoIcon />
-
             <h4 className={styles.logo__title}>{seoData.title}</h4>
           </Link>
 
