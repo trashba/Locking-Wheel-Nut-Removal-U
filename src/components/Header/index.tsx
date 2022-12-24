@@ -7,6 +7,7 @@ import { Button, Drawer } from "@ui";
 import seoData from "@data/seo";
 
 import styles from "@styles/components/header.module.scss";
+import ExportedImage from "next-image-export-optimizer";
 
 type Props = {};
 
@@ -17,32 +18,26 @@ const Header: NextPage<Props> = ({}) => {
     title: string;
     url: string;
     visible?: boolean;
-    icon?: JSX.Element;
   }[] = [
     {
       title: "Home",
       url: "/",
-      icon: <UserIcon />,
     },
     {
       title: "Gallery",
       url: "/#gallery",
-      icon: <UserAddIcon />,
     },
     {
       title: "Testimonials",
       url: "/#testimonials",
-      icon: <UserAddIcon />,
     },
     {
       title: "Contact",
       url: "/#contact",
-      icon: <UserAddIcon />,
     },
     {
       title: "Customers Stories",
       url: "/#contact",
-      icon: <UserAddIcon />,
     },
   ];
 
@@ -50,24 +45,30 @@ const Header: NextPage<Props> = ({}) => {
     <>
       <header className={`${styles.header} container`}>
         <Link href="/" className={styles.logo}>
+          <div className={styles.logo__image}>
+            <ExportedImage
+              src="/images/logo.jpeg"
+              alt={`${seoData.title} Logo`}
+              layout="fill"
+              objectFit="contain"
+            />
+          </div>
+
           <h4 className={styles.logo__title}>{seoData.title}</h4>
         </Link>
 
         <nav className={styles.header__nav}>
           <ul className={styles.nav__list}>
-            {navigation
-              .filter(({ visible }) => visible)
-              .map(({ title, url, icon }, index) => (
-                <li key={index} className={styles.list__item}>
-                  <Button
-                    href={url}
-                    style="light"
-                    className={styles.item__link}
-                    text={title}
-                    icon={icon}
-                  />
-                </li>
-              ))}
+            {navigation.map(({ title, url }, index) => (
+              <li key={index} className={styles.list__item}>
+                <Button
+                  href={url}
+                  style="light"
+                  className={styles.item__link}
+                  text={title}
+                />
+              </li>
+            ))}
           </ul>
 
           <Button
@@ -88,19 +89,16 @@ const Header: NextPage<Props> = ({}) => {
 
           <nav className={styles.header__nav}>
             <ul className={styles.nav__list}>
-              {navigation
-                .filter(({ visible }) => visible)
-                .map(({ title, url, icon }, index) => (
-                  <li key={index} className={styles.list__item}>
-                    <Button
-                      href={url}
-                      style="light"
-                      className={styles.item__link}
-                      text={title}
-                      icon={icon}
-                    />
-                  </li>
-                ))}
+              {navigation.map(({ title, url }, index) => (
+                <li key={index} className={styles.list__item}>
+                  <Button
+                    href={url}
+                    style="light"
+                    className={styles.item__link}
+                    text={title}
+                  />
+                </li>
+              ))}
             </ul>
           </nav>
         </div>

@@ -37,9 +37,24 @@
       }
     }
 
+    .logo__image {
+      width: 60px;
+      height: 60px;
+      position: relative;
+    }
+
     .logo__title {
       display: flex;
       align-items: center;
+      font-size: 1em;
+
+      @include screen(lg) {
+        font-size: 1.2em;
+      }
+
+      @include screen(xl) {
+        font-size: 1.8em;
+      }
     }
   }
 
@@ -53,7 +68,7 @@
     .nav__list {
       display: none;
 
-      @include screen(md) {
+      @include screen(lg) {
         display: flex;
         align-items: center;
         column-gap: 1em;
@@ -71,16 +86,8 @@
     .drawer_btn {
       display: flex;
 
-      @include screen(md) {
+      @include screen(lg) {
         display: none;
-      }
-    }
-
-    .header_user {
-      display: none;
-
-      @include screen(md) {
-        display: flex;
       }
     }
   }
@@ -116,6 +123,16 @@
     .logo__title {
       display: flex;
       align-items: center;
+
+      font-size: 1em;
+
+      @include screen(lg) {
+        font-size: 1.2em;
+      }
+
+      @include screen(xl) {
+        font-size: 1.8em;
+      }
     }
   }
 
