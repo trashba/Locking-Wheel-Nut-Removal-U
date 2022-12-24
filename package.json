@@ -10,9 +10,6 @@
     "start": "next start",
     "lint": "next lint",
     "serve": "npm run clean && npm run build && npm run export && npx serve out",
-    "prepare": "husky install",
-    "test": "",
-    "coverage": "",
     "postbuild": "next-sitemap"
   },
   "dependencies": {
