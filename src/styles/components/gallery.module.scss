@@ -1,0 +1,42 @@
+@import "../utils/typography";
+
+.wrapper {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+
+  a {
+    font-family: Inter;
+
+    @include typography(16px, 600, 24px, 0, center);
+  }
+
+  h2 {
+    margin-top: 12px;
+    margin-bottom: 24px;
+
+    font-family: Inter;
+    @include typography(48px, 800, 48px, 0, center);
+  }
+
+  .gallery {
+    .item {
+      min-height: 500px;
+
+      display: flex;
+      align-content: center;
+
+      .image {
+        object-fit: contain;
+        height: 100%;
+        flex: 1;
+      }
+    }
+
+    button[class*="control-arrow"] {
+      background-color: var(--gray-700) !important;
+      opacity: 1 !important;
+      z-index: 1 !important;
+    }
+  }
+}

@@ -4,7 +4,7 @@ import Map from "@components/Map";
 
 import styles from "@styles/components/landing.module.scss";
 import Button from "./UI/Button";
-import { CallIcon } from "@icon";
+import { CallIcon, PinIcon } from "@icon";
 import seoData from "@data/seo";
 
 const Landing = () => {
@@ -26,7 +26,13 @@ const Landing = () => {
       </p>
 
       <div className={styles.actions}>
-        <Button href="/#contact" text="Contact Us" size="xl" style="gray" />
+        <Button
+          href="/#contact"
+          text="Contact Us"
+          size="xl"
+          style="gray"
+          icon={<PinIcon />}
+        />
 
         <Button
           href="tel:+4407426961305"

@@ -2,6 +2,7 @@
   min-width: 100%;
   min-height: 300px;
   border-radius: var(--border-radius);
+  z-index: 1 !important;
 
   img[class*="leaflet-marker-icon"] {
     background-color: transparent;
