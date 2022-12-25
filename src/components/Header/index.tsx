@@ -7,7 +7,7 @@ import { Button, Drawer } from "@ui";
 import seoData from "@data/seo";
 
 import styles from "@styles/components/header.module.scss";
-import ExportedImage from "next-image-export-optimizer";
+import Image from "next/image";
 
 type Props = {};
 
@@ -46,12 +46,7 @@ const Header: NextPage<Props> = ({}) => {
       <header className={`${styles.header} container`}>
         <Link href="/" className={styles.logo}>
           <div className={styles.logo__image}>
-            <ExportedImage
-              src="/images/logo.jpeg"
-              alt={`${seoData.title} Logo`}
-              layout="fill"
-              objectFit="contain"
-            />
+            <Image src="/images/logo.jpeg" fill alt={`${seoData.title} Logo`} />
           </div>
 
           <h4 className={styles.logo__title}>{seoData.title}</h4>

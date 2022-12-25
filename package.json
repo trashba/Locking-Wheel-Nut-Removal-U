@@ -3,13 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "clean": "rm -rf out dist ./next ./public/signs/nextImageExportOptimizer/ ./public/signs/next-image-export-optimizer-hashes.json",
     "dev": "rm -rf out dist ./next && next dev",
     "build": "next build",
-    "export": "next export && next-image-export-optimizer",
+    "export": "next build && next export && next-export-optimize-images",
     "start": "next start",
     "lint": "next lint",
-    "serve": "npm run clean && npm run build && npm run export && npx serve out",
+    "serve": "npm run export && npx serve out",
     "postbuild": "next-sitemap"
   },
   "dependencies": {
@@ -20,8 +19,8 @@
     "axios": "^1.2.1",
     "leaflet": "^1.9.3",
     "next": "13.1.0",
+    "next-export-optimize-images": "^2.0.0",
     "next-image-export-optimizer": "^1.1.2",
-    "next-pwa": "^5.6.0",
     "next-sitemap": "^3.1.43",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
