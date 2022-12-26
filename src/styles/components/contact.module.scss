@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: center;
 
-  a {
+  p[id="contact"] {
     font-family: Inter;
 
     @include typography(16px, 600, 24px, 0, center);

@@ -8,7 +8,7 @@ import { PinIcon } from "@icon";
 const ContactUs = () => {
   return (
     <div className={`container ${styles.container}`}>
-      <a href="#contact">Contact us</a>
+      <p id="contact">Contact us</p>
 
       <h2>Our locations</h2>
 
