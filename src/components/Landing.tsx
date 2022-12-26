@@ -13,16 +13,34 @@ const Landing = () => {
       <h1>Mobile {seoData.title}</h1>
 
       <p>
-        Our prompt and courteous mobile locking wheel nut removal service is
-        available in a variety of places, including:
+        Have you lost your locking wheel nut key? Or is it broken or damaged?
         <br />
-        <strong>East London,</strong> <strong>Essex,</strong>{" "}
-        <strong>Cambridgeshire,</strong> <strong>Kent,</strong>{" "}
-        <strong>South East,</strong> <strong>And many more.</strong>
+        Has a mechanic already tried to remove it, maybe by drilling, and
+        failed?
         <br />
-        <span>GUARANTEED SUCCESSFUL REMOVAL OR NO CHARGE.</span>
+        Then we can help.
         <br />
-        Make a call on 07426 961305 to get back on the road right away!
+        Our fast and friendly mobile locking wheel nut removal service covers:
+        <br />
+        *East London
+        <br />
+        *Essex
+        <br />
+        *Cambridgeshire
+        <br />
+        *Kent
+        <br />
+        *south east
+        <br />
+        *And many other locations <br />
+        We can remove all four of your locking wheel nuts in around 10 to 15
+        minutes, and replace them with high quality standard wheel nuts or bolts
+        if required.
+        <br />
+        <span>SUCCESSFUL REMOVAL GUARANTEED OR NO CHARGE.</span>
+        <br />
+        <a href="tel:+4407426961305">Call 07426 961305</a> and get yourself back
+        on the road today!
       </p>
 
       <div className={styles.actions}>
