@@ -52,6 +52,14 @@ class MyDocument extends Document {
               />
             )}
 
+          {process.env.NODE_ENV !== "development" &&
+            process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION && (
+              <meta
+                name="google-site-verification"
+                content={process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION}
+              />
+            )}
+
           <meta
             name="keywords"
             content="locking wheel nut removal, mobile locking wheel nut removal, locking wheel bolt removal, locking wheel bolt removal, lock nut removal, locking wheel nut removal service, locknut remover, locking wheel nut remover, lock wheel nut removal services, "
